@@ -1,0 +1,11 @@
+<div class="card text-center mb-4" [ngClass]="coche.gasolina ? 'gasolina' : 'diesel'">
+  <div class="card-header">
+    <h1>{{ coche.marca }} {{ coche.nombre }}</h1>
+  </div>
+  <div class="card-body">
+    <img [src]="imagenSource" [routerLink]="['/detalles', coche.id]">
+  </div>
+  <div class="card-footer">
+    <h4>{{ coche.vendidos }} unidades</h4>
+  </div>
+</div>

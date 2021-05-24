@@ -1,0 +1,15 @@
+<div class="card text-center"  [ngClass]="coche.gasolina ? 'gasolina' : 'diesel'">
+  <div class="card-header">
+    <h1>{{coche.marca}} {{coche.nombre}}</h1>
+  </div>
+  <div class="card-body">
+    <img [src]="imagenSource">
+  </div>
+  <div class="card-footer">
+    <form>
+      <input id="numCoches" type="number" name="numCoches" [(ngModel)]="coche.vendidos">
+      <a [routerLink]="['/dashboard']" class="btn btn-warning">VOLVER</a>
+      <a type="submit" class="btn btn-primary" (click)="editarCoche()" [routerLink]="['/dashboard', coche.id]">GUARDAR</a>
+    </form>
+  </div>
+</div>

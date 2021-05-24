@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="topMasVendidos">
+    <label for="top">TOP </label>
+    <input class="col-sm-2 mb-4 ml-3 mr-3" id="top" type="number" name="top" [(ngModel)]="top">
+    <label for="top"> MÁS VENDIDOS</label>
+  </div>
+  <div class="inicio-item">
+    <app-inicio-item *ngFor="let coche of coches | filtroCoches: top; let i = index;"
+    [coche]="coche"
+    ></app-inicio-item>
+  </div>
+</div>
